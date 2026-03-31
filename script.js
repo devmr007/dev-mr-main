@@ -1,3 +1,4 @@
+// ===== NAV =====
 const menuBtn = document.getElementById('menuBtn');
 const navLinks = document.getElementById('navLinks');
 
@@ -13,60 +14,105 @@ document.querySelectorAll('.nav-links a').forEach(link => {
   });
 });
 
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a');
-
+// ===== PROJECT RENDER =====
 const container = document.getElementById("projectsContainer");
 
-container.innerHTML = projects.map(project => `
-  <article class="project-card new-layout">
+let showAll = false;
 
-    <div class="project-slider">
-      <div class="slides">
-        ${project.images.map(img => `<img src="${img}" />`).join('')}
-      </div>
+function renderProjects() {
+
+  const firstTwo = projects.slice(0, 2);
+  const rest = projects.slice(2);
+
+  // ALWAYS show first 2
+  let html = firstTwo.map(project => createProjectHTML(project)).join('');
+
+  // SHOW REST ONLY IF CLICKED
+  if (showAll) {
+    html += rest.map(project => createProjectHTML(project)).join('');
+  }
+
+  // ADD BUTTON
+  html += `
+    <div style="text-align:center; margin-top:20px;">
+      <button id="viewMoreBtn" class="btn btn-primary">
+        ${showAll ? "Show Less" : "View More"}
+      </button>
     </div>
+  `;
 
-    <div class="project-body">
-      <div class="project-top">
-        <h3>${project.title}</h3>
-        <span class="tag">${project.tag}</span>
-      </div>
+  container.innerHTML = html;
 
-      <p class="project-desc">
-        ${project.desc}
-      </p>
-
-      <div class="platforms">
-        <span class="platform">🤖 Android</span>
-        <span class="platform">🍎 iOS</span>
-      </div>
-
-      <div class="project-links">
-        <a class="project-link" href="#">Live</a>
-        <a class="project-link" href="#">GitHub</a>
-      </div>
-    </div>
-
-  </article>
-  <br>
-`).join('');
-
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      navAnchors.forEach(a => a.classList.toggle('active', a.getAttribute('href') === `#${entry.target.id}`));
-    }
+  document.getElementById("viewMoreBtn").addEventListener("click", () => {
+    showAll = !showAll;
+    renderProjects();
+    initSlider();
   });
-}, { threshold: 0.35 });
 
-sections.forEach(section => observer.observe(section));
+  initSlider();
+}
 
-window.addEventListener("load", () => {
+renderProjects();
+
+// ===== LAZY LOAD =====
+
+
+// helper
+function loadImage(img, observer) {
+  img.src = img.dataset.src;
+
+  img.onload = () => {
+    img.classList.add('loaded');
+  };
+
+  if (observer) observer.unobserve(img);
+}
+
+
+function createProjectHTML(project) {
+  return `
+    <article class="project-card new-layout">
+
+      <div class="project-slider">
+        <div class="slides">
+          ${project.images.map(img => `
+           <img src="${img}" alt="" />
+          `).join('')}
+        </div>
+      </div>
+
+      <div class="project-body">
+        <div class="project-top">
+          <h3>${project.title}</h3>
+          <span class="tag">${project.tag}</span>
+        </div>
+
+        <p class="project-desc">${project.desc}</p>
+
+        <div class="platforms">
+          <span class="platform">🤖 Android</span>
+          <span class="platform">🍎 iOS</span>
+        </div>
+
+        <div class="project-links">
+          <a class="project-link" href="#">Live</a>
+          <a class="project-link" href="#">GitHub</a>
+        </div>
+      </div>
+
+    </article>
+    <br>
+  `;
+}
+// ===== SLIDER =====
+function initSlider() {
   document.querySelectorAll('.project-slider').forEach(slider => {
     const slides = slider.querySelector('.slides');
 
-    slides.innerHTML += slides.innerHTML;
+    if (!slides.dataset.duplicated) {
+      slides.innerHTML += slides.innerHTML;
+      slides.dataset.duplicated = "true";
+    }
 
     let position = 0;
     let speed = 1;
@@ -88,7 +134,6 @@ window.addEventListener("load", () => {
 
       position += delta;
       velocity = delta * 0.2;
-
       startY = currentY;
     });
 
@@ -107,7 +152,6 @@ window.addEventListener("load", () => {
       const delta = startY - e.clientY;
       position += delta;
       velocity = delta * 0.2;
-
       startY = e.clientY;
     });
 
@@ -121,13 +165,8 @@ window.addEventListener("load", () => {
         velocity *= 0.95;
       }
 
-      if (position >= slides.scrollHeight / 2) {
-        position = 0;
-      }
-
-      if (position < 0) {
-        position = slides.scrollHeight / 2;
-      }
+      if (position >= slides.scrollHeight / 2) position = 0;
+      if (position < 0) position = slides.scrollHeight / 2;
 
       slides.style.transform = `translateY(-${position}px)`;
       requestAnimationFrame(animate);
@@ -135,4 +174,21 @@ window.addEventListener("load", () => {
 
     animate();
   });
-}); 
+}
+
+// ===== ACTIVE NAV =====
+const sections = document.querySelectorAll('section[id]');
+const navAnchors = document.querySelectorAll('.nav-links a');
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      navAnchors.forEach(a =>
+        a.classList.toggle('active',
+          a.getAttribute('href') === `#${entry.target.id}`)
+      );
+    }
+  });
+}, { threshold: 0.35 });
+
+sections.forEach(section => observer.observe(section));
