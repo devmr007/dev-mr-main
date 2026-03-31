@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects | Musfikur Rahman</title>
+  <link rel="stylesheet" href="2nd.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <nav class="headers">
+      <div class="mobile-header">
+        <div class="leftnav">
+          <a href="index.html"><img src="images/inverlogo.png" alt="Logo" style="width: 52px; height: 52px;"></a>
+        </div>
+        <div class="menu-toggle" id="menu-toggle">
+          <span class="menu-icon" id="menu-icon">&#9776;</span>
+          <span class="close-icon" id="close-icon" style="display: none;">&times;</span>
+        </div>
+      </div>
+      <div class="rightnav" id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="projects.html" class="active">Projects</a></li>
+          <li><a href="contact.html">Contact Me</a></li>
+          <li><a href="about.html">About Me</a></li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Projects Content -->
+  <main class="mainly">
+    <div class="main-wrapper">
+      <div class="mainleftdiv">
+        <h1 style="color:#473260;">My Projects</h1>
+        <p>Here are some of the projects I’ve worked on:</p>
+        <ul style="margin-top:1rem; text-align:left;">
+          <li><strong>Flutter Apps</strong> – Mobile apps with API integration.</li>
+          <li><strong>Portfolio Website</strong> – Responsive design using HTML/CSS/JS.</li>
+          <li><strong>UI/UX Work</strong> – Clean and minimal design in Figma.</li>
+        </ul>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="foot">
+    <a class="icon" href="https://www.facebook.com/musfikurrahmanosham" target="_blank">
+        <img src="images/facebook.png" alt="Facebook" width="28" height="28">
+        <span>Facebook</span>
+    </a>
+    <a class="icon" href="https://www.linkedin.com/in/musfikur-rahman-89439b25a/" target="_blank">
+        <img class="icon" src="images/linkedin.png" alt="LinkedIn" width="28"
+            height="28">
+        <span>LinkedIn</span>
+    </a>
+    <a class="icon" href="mailto:musfikr589@gmail.com" target="_blank">
+        <img class="icon" src="images/gmail.png" alt="Gmail" width="27"
+            height="28">
+        <span>Gmail</span>
+    </a>
+    <a class="icon" href="https://wa.me/+8801756575046" target="_blank">
+        <img class="icon" src="images/whatsapp.png" alt="WhatsApp" width="28"
+            height="28">
+        <span>WhatsApp</span>
+    </a>
+    <a class="icon" href="https://t.me/musfikurrahmanosham" target="_blank">
+        <img class="icon" src="images/telegram.png" alt="Telegram" width="28"
+            height="28">
+        <span>Telegram</span>
+    </a>
+    <div class="footlink">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact Me</a>
+        <a href="about.html">About Me</a>
+    </div>
+</footer>
+  <h3 class="copyrights">2025 All Rights Reserved.</h3>
+
+  <!-- Nav Script -->
+  <script>
+    const menuToggle=document.getElementById("menu-toggle");
+    const navMenu=document.getElementById("nav-menu");
+    const menuIcon=document.getElementById("menu-icon");
+    const closeIcon=document.getElementById("close-icon");
+    menuToggle.addEventListener("click",()=>{
+      navMenu.classList.toggle("active");
+      const isOpen=navMenu.classList.contains("active");
+      menuIcon.style.display=isOpen?"none":"inline";
+      closeIcon.style.display=isOpen?"inline":"none";
+    });
+  </script>
+</body>
+</html>
