@@ -17,13 +17,11 @@ const projects = [
     {
         title: "FreemanZ",
         tag: "E-commerce",
-
         desc: "An e-commerce platform that enables users to browse products, manage orders, and enjoy a seamless shopping experience with smart recommendations and secure checkout.",
-
-        playstore: "",
-        appstore: "",
+        playstore: "https://play.google.com/store/apps/details?id=app.freeman.freemanz",
+        appstore: "https://apps.apple.com/us/app/freemanz/id6755990083",
         github: "",
-        website: "",
+        website: "https://freemanzllc.com/",
         images: [
             "/images/freemanz/freemanz-1.png",
             "/images/freemanz/freemanz-2.png"
@@ -85,8 +83,8 @@ const projects = [
         title: "Shaara",
         tag: "Multivendor",
         desc: "A multivendor service marketplace designed for providers to list and manage services such as salons, pedicure, and other personal care offerings, with an intuitive booking experience for users.",
-        playstore: "",
-        appstore: "",
+        playstore: "https://play.google.com/store/apps/details?id=app.faris.shaara",
+        appstore: "https://apps.apple.com/us/app/shaara/id6759182992",
         github: "",
         website: "",
         images: [
@@ -111,12 +109,11 @@ const projects = [
             "/images/tapin/tapin-4.png",
             "/images/tapin/tapin-5.png"
         ]
-    }
-    ,
+    },
     {
         title: "Aira",
-        tag: "Unknown",
-        desc: "Aira project placeholder.",
+        tag: "Travel",
+        desc: "Aira is an app like Airbnb where hosts can post their property or experience, get bookings from users, and earn money.",
         playstore: "",
         appstore: "",
         github: "",
@@ -132,9 +129,9 @@ const projects = [
     {
         title: "B2B Solution",
         tag: "B2B",
-        desc: "B2B Solution project placeholder.",
+        desc: "B2B is a restaurant and vendor role app where restaurants can post needed stock and nearby vendors can send offers to sell wholesale products.",
         playstore: "",
-        appstore: "",
+        appstore: "https://apps.apple.com/us/app/b2b-solution/id6764485584",
         github: "",
         website: "",
         images: [
@@ -148,9 +145,9 @@ const projects = [
     {
         title: "BizMeet",
         tag: "Social",
-        desc: "BizMeet project placeholder.",
-        playstore: "",
-        appstore: "",
+        desc: "BizMeet is a social app like Facebook where people can find nearby people, post, share stories, message, and join events.",
+        playstore: "https://play.google.com/store/apps/details?id=com.bizmeet.app",
+        appstore: "https://apps.apple.com/us/app/biz-meet/id6760164388",
         github: "",
         website: "",
         images: [
@@ -166,9 +163,9 @@ const projects = [
     {
         title: "Bridge Network",
         tag: "Networking",
-        desc: "Bridge Network project placeholder.",
-        playstore: "",
-        appstore: "",
+        desc: "Bridge Network matches teachers and students; mentors can set tasks for students to complete and also message and connect.",
+        playstore: "https://play.google.com/store/apps/details?id=com.app.bridge_network",
+        appstore: "https://apps.apple.com/us/app/bridge-system/id6762170336",
         github: "",
         website: "",
         images: [
@@ -180,9 +177,9 @@ const projects = [
         ]
     },
     {
-        title: "DAC",
-        tag: "Utility",
-        desc: "DAC project placeholder.",
+        title: "Dar El Chimal",
+        tag: "Education",
+        desc: "Dar El Chimal is an online study platform where students learn from home; teachers can assign books or homework and mark or grade student work.",
         playstore: "",
         appstore: "",
         github: "",
@@ -197,10 +194,10 @@ const projects = [
     },
     {
         title: "GeoPaving",
-        tag: "Utility",
-        desc: "GeoPaving project placeholder.",
-        playstore: "",
-        appstore: "",
+        tag: "Management",
+        desc: "GeoPaving is a management app for companies to manage workers, managers, and offices; it functions like a job/crew management tool.",
+        playstore: "https://play.google.com/store/apps/details?id=app.kalsayegh.geopaving.geo.paving",
+        appstore: "https://apps.apple.com/us/app/geo-paving/id6766808924",
         github: "",
         website: "",
         images: [
@@ -213,10 +210,10 @@ const projects = [
     },
     {
         title: "MyWolf",
-        tag: "Utility",
-        desc: "MyWolf project placeholder.",
-        playstore: "",
-        appstore: "",
+        tag: "Pet Care",
+        desc: "MyWolf is a pet-care blogging app where new petcare content is added by admins and users can care for their wolf or pet accordingly.",
+        playstore: "https://play.google.com/store/apps/details?id=com.shepherd.app.shepherd",
+        appstore: "https://apps.apple.com/us/app/my-wolf-app/id6782862582",
         github: "",
         website: "",
         images: [
@@ -225,6 +222,22 @@ const projects = [
             "/images/myWolf/wolf-3.png",
             "/images/myWolf/wolf-4.png",
             "/images/myWolf/wolf-5.png"
+        ]
+    },
+    {
+        title: "AlloTaf",
+        tag: "Job Search",
+        desc: "AlloTaf is a simple job seeker and recruiter app where recruiters can post jobs and seekers can apply with their CV and appropriate details.",
+        playstore: "https://play.google.com/store/apps/details?id=com.allotaf.app",
+        appstore: "",
+        github: "",
+        website: "",
+        images: [
+            "/images/alloTaf/allo-1.png",
+            "/images/alloTaf/allo-2.png",
+            "/images/alloTaf/allo-3.png",
+            "/images/alloTaf/allo-4.png",
+            "/images/alloTaf/allo-5.png"
         ]
     }
 ];
