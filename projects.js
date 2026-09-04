@@ -180,7 +180,7 @@ const projects = [
         title: "Dar El Chimal",
         tag: "Education",
         desc: "Dar El Chimal is an online study platform where students learn from home; teachers can assign books or homework and mark or grade student work.",
-        playstore: "",
+        playstore: "https://play.google.com/store/apps/details?id=com.dac.dac.dac",
         appstore: "",
         github: "",
         website: "",
