@@ -95,8 +95,10 @@ function createProjectHTML(project) {
         </div>
 
         <div class="project-links">
-          <a class="project-link" href="#">Live</a>
-          <a class="project-link" href="#">GitHub</a>
+          ${project.playstore ? `<a class="project-link" href="${project.playstore}" target="_blank" rel="noopener">📱 Play Store</a>` : ''}
+          ${project.appstore ? `<a class="project-link" href="${project.appstore}" target="_blank" rel="noopener"> App Store</a>` : ''}
+          ${project.github ? `<a class="project-link" href="${project.github}" target="_blank" rel="noopener">💻 GitHub</a>` : ''}
+          ${project.website ? `<a class="project-link" href="${project.website}" target="_blank" rel="noopener">🔗 Website</a>` : ''}
         </div>
       </div>
 
