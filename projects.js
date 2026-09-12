@@ -1,17 +1,17 @@
 const projects = [
     {
-        title: "Drafty App",
-        tag: "Sports",
-        desc: "A football talent discovery app with player stats, club suggestions, and smart matchmaking system.",
-        playstore: "",
-        appstore: "",
+        title: "Shaara",
+        tag: "Multivendor",
+        desc: "A multivendor service marketplace designed for providers to list and manage services such as salons, pedicure, and other personal care offerings, with an intuitive booking experience for users.",
+        playstore: "https://play.google.com/store/apps/details?id=app.faris.shaara",
+        appstore: "https://apps.apple.com/us/app/shaara/id6759182992",
         github: "",
         website: "",
         images: [
-            "/images/drafty/drafty-1.png",
-            "/images/drafty/drafty-2.png",
-            "/images/drafty/drafty-3.png",
-            "/images/drafty/drafty-4.png"
+            "/images/shaara/shaara-1.png",
+            "/images/shaara/shaara-2.png",
+            "/images/shaara/shaara-3.png",
+            "/images/shaara/shaara-4.png"
         ]
     },
     {
@@ -25,6 +25,53 @@ const projects = [
         images: [
             "/images/freemanz/freemanz-1.png",
             "/images/freemanz/freemanz-2.png"
+        ]
+    }, {
+        title: "BizMeet",
+        tag: "Social",
+        desc: "BizMeet is a social app like Facebook where people can find nearby people, post, share stories, message, and join events.",
+        playstore: "https://play.google.com/store/apps/details?id=com.bizmeet.app",
+        appstore: "https://apps.apple.com/us/app/biz-meet/id6760164388",
+        github: "",
+        website: "",
+        images: [
+            "/images/bizMeet/biz-1.png",
+            "/images/bizMeet/biz-2.png",
+            "/images/bizMeet/biz-3.png",
+            "/images/bizMeet/biz-4.png",
+            "/images/bizMeet/biz-5.png",
+            "/images/bizMeet/biz-6.png",
+            "/images/bizMeet/biz-7.png"
+        ]
+    }, {
+        title: "MyWolf",
+        tag: "Pet Care",
+        desc: "MyWolf is a pet-care blogging app where new petcare content is added by admins and users can care for their wolf or pet accordingly.",
+        playstore: "https://play.google.com/store/apps/details?id=com.shepherd.app.shepherd",
+        appstore: "https://apps.apple.com/us/app/my-wolf-app/id6782862582",
+        github: "",
+        website: "",
+        images: [
+            "/images/myWolf/wolf-1.png",
+            "/images/myWolf/wolf-2.png",
+            "/images/myWolf/wolf-3.png",
+            "/images/myWolf/wolf-4.png",
+            "/images/myWolf/wolf-5.png"
+        ]
+    }, {
+        title: "GeoPaving",
+        tag: "Management",
+        desc: "GeoPaving is a management app for companies to manage workers, managers, and offices; it functions like a job/crew management tool.",
+        playstore: "https://play.google.com/store/apps/details?id=app.kalsayegh.geopaving.geo.paving",
+        appstore: "https://apps.apple.com/us/app/geo-paving/id6766808924",
+        github: "",
+        website: "",
+        images: [
+            "/images/geoPaving/geo-1.png",
+            "/images/geoPaving/geo-2.png",
+            "/images/geoPaving/geo-3.png",
+            "/images/geoPaving/geo-4.png",
+            "/images/geoPaving/geo-5.png"
         ]
     },
     {
@@ -52,6 +99,20 @@ const projects = [
             "/images/internetBatch/internet-1.png",
             "/images/internetBatch/internet-2.png"
         ]
+    }, {
+        title: "Drafty App",
+        tag: "Sports",
+        desc: "A football talent discovery app with player stats, club suggestions, and smart matchmaking system.",
+        playstore: "",
+        appstore: "",
+        github: "",
+        website: "",
+        images: [
+            "/images/drafty/drafty-1.png",
+            "/images/drafty/drafty-2.png",
+            "/images/drafty/drafty-3.png",
+            "/images/drafty/drafty-4.png"
+        ]
     },
     {
         title: "Meal App",
@@ -77,21 +138,6 @@ const projects = [
         images: [
             "/images/rai/rai-1.png",
             "/images/rai/rai-2.png"
-        ]
-    },
-    {
-        title: "Shaara",
-        tag: "Multivendor",
-        desc: "A multivendor service marketplace designed for providers to list and manage services such as salons, pedicure, and other personal care offerings, with an intuitive booking experience for users.",
-        playstore: "https://play.google.com/store/apps/details?id=app.faris.shaara",
-        appstore: "https://apps.apple.com/us/app/shaara/id6759182992",
-        github: "",
-        website: "",
-        images: [
-            "/images/shaara/shaara-1.png",
-            "/images/shaara/shaara-2.png",
-            "/images/shaara/shaara-3.png",
-            "/images/shaara/shaara-4.png"
         ]
     },
     {
@@ -143,24 +189,6 @@ const projects = [
         ]
     },
     {
-        title: "BizMeet",
-        tag: "Social",
-        desc: "BizMeet is a social app like Facebook where people can find nearby people, post, share stories, message, and join events.",
-        playstore: "https://play.google.com/store/apps/details?id=com.bizmeet.app",
-        appstore: "https://apps.apple.com/us/app/biz-meet/id6760164388",
-        github: "",
-        website: "",
-        images: [
-            "/images/bizMeet/biz-1.png",
-            "/images/bizMeet/biz-2.png",
-            "/images/bizMeet/biz-3.png",
-            "/images/bizMeet/biz-4.png",
-            "/images/bizMeet/biz-5.png",
-            "/images/bizMeet/biz-6.png",
-            "/images/bizMeet/biz-7.png"
-        ]
-    },
-    {
         title: "Bridge Network",
         tag: "Networking",
         desc: "Bridge Network matches teachers and students; mentors can set tasks for students to complete and also message and connect.",
@@ -193,38 +221,6 @@ const projects = [
         ]
     },
     {
-        title: "GeoPaving",
-        tag: "Management",
-        desc: "GeoPaving is a management app for companies to manage workers, managers, and offices; it functions like a job/crew management tool.",
-        playstore: "https://play.google.com/store/apps/details?id=app.kalsayegh.geopaving.geo.paving",
-        appstore: "https://apps.apple.com/us/app/geo-paving/id6766808924",
-        github: "",
-        website: "",
-        images: [
-            "/images/geoPaving/geo-1.png",
-            "/images/geoPaving/geo-2.png",
-            "/images/geoPaving/geo-3.png",
-            "/images/geoPaving/geo-4.png",
-            "/images/geoPaving/geo-5.png"
-        ]
-    },
-    {
-        title: "MyWolf",
-        tag: "Pet Care",
-        desc: "MyWolf is a pet-care blogging app where new petcare content is added by admins and users can care for their wolf or pet accordingly.",
-        playstore: "https://play.google.com/store/apps/details?id=com.shepherd.app.shepherd",
-        appstore: "https://apps.apple.com/us/app/my-wolf-app/id6782862582",
-        github: "",
-        website: "",
-        images: [
-            "/images/myWolf/wolf-1.png",
-            "/images/myWolf/wolf-2.png",
-            "/images/myWolf/wolf-3.png",
-            "/images/myWolf/wolf-4.png",
-            "/images/myWolf/wolf-5.png"
-        ]
-    },
-    {
         title: "AlloTaf",
         tag: "Job Search",
         desc: "AlloTaf is a simple job seeker and recruiter app where recruiters can post jobs and seekers can apply with their CV and appropriate details.",
@@ -238,6 +234,22 @@ const projects = [
             "/images/alloTaf/allo-3.png",
             "/images/alloTaf/allo-4.png",
             "/images/alloTaf/allo-5.png"
+        ]
+    },
+    {
+        title: "SmileBud",
+        tag: "Health",
+        desc: "SmileBud is a is a daily 2 time brushing reminder app that helps users maintain oral hygiene by sending notifications to brush their teeth twice a day.",
+        playstore: "",
+        appstore: "",
+        github: "",
+        website: "",
+        images: [
+            "/images/smiley/smiley-1.png",
+            "/images/smiley/smiley-2.png",
+            "/images/smiley/smiley-3.png",
+            "/images/smiley/smiley-4.png",
+            "/images/smiley/smiley-5.png"
         ]
     }
 ];
